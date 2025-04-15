@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jclxQ5nte+XyjYAG9VGM6iumsZtUpg5TEeC4H2q0Geo=",
+  "Source": "GithubSearchAPI",
+  "BasePath": "_content/GithubSearchAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
