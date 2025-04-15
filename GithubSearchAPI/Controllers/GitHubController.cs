@@ -2,7 +2,6 @@ using GithubSearchAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace GithubSearchAPI.Controllers
 {
@@ -12,9 +11,9 @@ namespace GithubSearchAPI.Controllers
     {
         private readonly HttpClient _httpClient;
 
-        public GitHubController()
+        public GitHubController(HttpClient httpClient)
         {
-            _httpClient = new HttpClient();
+            _httpClient = httpClient;
             _httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("DotNetClient", "1.0"));
         }
 
