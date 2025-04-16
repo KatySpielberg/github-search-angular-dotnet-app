@@ -3,20 +3,15 @@
   Displays a single repository result with name, description, and owner info
 -->
 
-<div class="repo-card">
-    <!-- Repository name -->
-    <a [href]="repo.htmlUrl" class="repo-name" target="_blank" rel="noopener noreferrer">
-      {{ repo.name }}
-    </a>
-  
-    <!-- Description -->
-    <p class="repo-description">
-      {{ repo.description || 'No description provided.' }}
-    </p>
-  
-    <!-- Owner info -->
-    <div class="repo-owner">
-      <img [src]="repo.ownerAvatarUrl" [alt]="repo.ownerLogin + ' avatar'" />
-      <span class="owner-login">{{ repo.ownerLogin }}</span>
-    </div>
-  </div>
+<mat-card class="repo-card">
+    <mat-card-title>
+      <a [href]="repo.htmlUrl" target="_blank">{{ repo.name }}</a>
+    </mat-card-title>
+    <mat-card-content>
+      <p>{{ repo.description || 'No description.' }}</p>
+      <div class="owner">
+        <img [src]="repo.ownerAvatarUrl" alt="{{ repo.ownerLogin }}" />
+        <span>{{ repo.ownerLogin }}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>

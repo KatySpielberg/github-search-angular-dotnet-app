@@ -35,3 +35,4 @@ C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\refint\GithubSearchA
 C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\GithubSearchAPI.pdb
 C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\GithubSearchAPI.genruntimeconfig.cache
 C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\ref\GithubSearchAPI.dll
+C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\GithubSearchAPI.sourcelink.json

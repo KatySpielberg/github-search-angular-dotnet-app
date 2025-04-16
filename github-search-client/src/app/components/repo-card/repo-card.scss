@@ -1,51 +1,48 @@
-// Card container styles
+// Repo card styling for Angular Material
+
 :host {
-    display: block;
-    background-color: var(--color-bg-dark); // Dark navy background
-    border: 1px solid var(--color-border);   // Light gray border
+  display: block;
+  margin-bottom: 16px;
+
+  // Add slight hover effect to the card
+  mat-card {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    color: var(--color-text-light);          // White text color
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
-  }
-  
-  :host:hover {
-    transform: translateY(-3px); // Slight lift on hover
-  }
-  
-  // Repository name
-  .repo-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-primary); // Orange accent for repo name
-    text-decoration: none;
-  }
-  
-  // Description text
-  .repo-description {
-    font-size: 1rem;
-    margin: 8px 0;
-    color: var(--color-text-light); // White text for readability
-  }
-  
-  // Owner info
-  .repo-owner {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-  
-    img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%; // Circular avatar
-      margin-right: 8px;
-    }
-  
-    .owner-login {
-      font-size: 0.9rem;
-      font-weight: 500;
+
+    &:hover {
+      transform: translateY(-3px);
     }
   }
-  
+}
+
+a.repo-name {
+  color: var(--color-primary); // Orange accent for link
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.repo-description {
+  margin: 8px 0;
+}
+
+.owner {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .owner-login {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}

@@ -12,7 +12,6 @@
   --color-text-light: #ffffff;    // White text
   --color-border: #dddddd;
 }
-
 // =========================
 // Material Theme Setup
 // =========================
@@ -20,8 +19,7 @@ html {
   @include mat.theme((
     color: (
       theme-type: light,
-      primary: mat.$orange-palette, 
-      //accent: mat.$blue-palette,   Valid properties are theme-type, primary, tertiary, use-system-variables, system-variables-prefix.
+      primary: mat.$orange-palette,
     ),
     density: 0,
   ));
@@ -39,4 +37,28 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// =========================
+// Search Container Styling
+// =========================
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+
+  .search-input {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  button {
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 12px;
+    align-self: center;
+  }
 }
