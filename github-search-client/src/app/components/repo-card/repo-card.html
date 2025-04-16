@@ -1,1 +1,22 @@
-<p>repo-card works!</p>
+<!--
+  GitHub Repository Card
+  Displays a single repository result with name, description, and owner info
+-->
+
+<div class="repo-card">
+    <!-- Repository name -->
+    <a [href]="repo.htmlUrl" class="repo-name" target="_blank" rel="noopener noreferrer">
+      {{ repo.name }}
+    </a>
+  
+    <!-- Description -->
+    <p class="repo-description">
+      {{ repo.description || 'No description provided.' }}
+    </p>
+  
+    <!-- Owner info -->
+    <div class="repo-owner">
+      <img [src]="repo.ownerAvatarUrl" [alt]="repo.ownerLogin + ' avatar'" />
+      <span class="owner-login">{{ repo.ownerLogin }}</span>
+    </div>
+  </div>
