@@ -34,6 +34,7 @@ namespace GithubSearchAPI.Controllers
                 .EnumerateArray()
                 .Select(item => new GitHubRepoDto
                 {
+                    Id = item.GetProperty("id").GetInt64(),
                     Name = item.GetProperty("name").GetString(),
                     HtmlUrl = item.GetProperty("html_url").GetString(),
                     Description = item.GetProperty("description").GetString(),

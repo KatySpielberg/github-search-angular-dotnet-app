@@ -31,6 +31,7 @@ export class App {
   title = 'github-search-client';
   searchInput: string = ''; 
   repos: GithubRepo[] = []; // Store GitHub repositories here
+  bookmarks: GithubRepo[] = [];
 
   constructor(private githubService: GithubService) {}
 
@@ -41,4 +42,14 @@ export class App {
       this.repos = data; // Store result in local state
     });
   }
+
+  onBookmark(repo: GithubRepo): void {
+    const alreadyExists = this.bookmarks.find(r => r.id === repo.id);
+    if (!alreadyExists) {
+      this.bookmarks.push(repo);
+      console.log('Bookmarked:', repo);
+      // In future: save to sessionStorage or a custom service
+    }
+  }
+
 }

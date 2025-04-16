@@ -10,7 +10,11 @@
 </div>
 
 <div class="results-container">
-  <app-repo-card *ngFor="let repo of repos" [repo]="repo"></app-repo-card>
+  <app-repo-card 
+    *ngFor="let repo of repos"
+    [repo]="repo"
+    (bookmark)="onBookmark(repo)">
+  </app-repo-card>
 </div>
 
 <router-outlet></router-outlet>

@@ -46,3 +46,11 @@ a.repo-name {
     font-weight: 500;
   }
 }
+
+// Float the bookmark button to the right of the card title
+mat-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 0.5rem 0 0.5rem;
+}

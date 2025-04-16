@@ -4,9 +4,15 @@
 -->
 
 <mat-card class="repo-card">
+
     <mat-card-title>
-      <a [href]="repo.htmlUrl" target="_blank">{{ repo.name }}</a>
-    </mat-card-title>
+        <a [href]="repo.htmlUrl" target="_blank">{{ repo.name }}</a>
+        <!-- Bookmark icon -->
+        <button mat-icon-button color="primary" (click)="onBookmarkClick()">
+          <mat-icon>bookmark_border</mat-icon>
+        </button>
+      </mat-card-title>
+
     <mat-card-content>
       <p>{{ repo.description || 'No description.' }}</p>
       <div class="owner">
@@ -14,4 +20,5 @@
         <span>{{ repo.ownerLogin }}</span>
       </div>
     </mat-card-content>
+
   </mat-card>
