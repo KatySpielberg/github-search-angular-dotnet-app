@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<!-- Global navigation bar -->
+<nav class="navbar">
+    <a (click)="gotoHome()">Home</a>
+    <a (click)="gotoBookmarks()">Bookmarks</a>
+    <a (click)="logout()" class="logout-link">Logout</a>
+</nav>
+
+
+<!-- KATYA comment
+I tryed to use routerLink at first, 
+but I had an issue. 
+To save time I decided to use event instead.
+<nav class="navbar">
+    <a routerLink="/" routerLinkActive="active-link">Home</a>
+    <a routerLink="/bookmarks" routerLinkActive="active-link">Bookmarks</a>
+    <a (click)="logout()" class="logout-link">Logout</a>
+  </nav> -->
+
+  <!-- Main routed content -->
+  <router-outlet></router-outlet>
+  

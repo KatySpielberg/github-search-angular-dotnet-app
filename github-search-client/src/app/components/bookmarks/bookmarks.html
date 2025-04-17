@@ -1,20 +1,14 @@
+<!-- Bookmarks Page Header -->
 <h2 class="heading">Your Bookmarked Repositories</h2>
 
+<!-- Show empty state if no bookmarks -->
 <div *ngIf="bookmarks.length === 0" class="empty-message">
   <p>No bookmarks yet. Go explore some repos!</p>
 </div>
 
-<div *ngFor="let repo of bookmarks" class="repo-card">
-  <mat-card>
-    <mat-card-title>
-      <a [href]="repo.htmlUrl" target="_blank">{{ repo.name }}</a>
-    </mat-card-title>
-    <mat-card-content>
-      <p>{{ repo.description || 'No description available.' }}</p>
-      <div class="owner">
-        <img [src]="repo.ownerAvatarUrl" alt="{{ repo.ownerLogin }}" />
-        <span>{{ repo.ownerLogin }}</span>
-      </div>
-    </mat-card-content>
-  </mat-card>
-</div>
+<!-- Render each bookmarked repo -->
+<app-repo-card
+  *ngFor="let repo of bookmarks"
+  [repo]="repo"
+  (bookmark)="remove(repo)"
+></app-repo-card>

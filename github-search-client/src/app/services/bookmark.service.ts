@@ -30,6 +30,7 @@ export class BookmarkService {
 
   /**
    * Removes a GitHub repository from bookmarks by ID.
+   * Not required now. For future using.
    * @param id Repository ID to remove
    */
   removeBookmark(id: number): void {

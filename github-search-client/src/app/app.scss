@@ -1,0 +1,25 @@
+/* Styling the top navigation bar */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: #0c1238;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+
+  a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &.active-link {
+      color: var(--color-primary);
+    }
+  }
+
+  .logout-link {
+    cursor: pointer;
+  }
+}
