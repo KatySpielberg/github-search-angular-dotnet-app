@@ -12,6 +12,15 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Register session support
+builder.Services.AddDistributedMemoryCache(); // Required for session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
@@ -19,9 +28,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Use CORS
+// Middleware pipeline
 app.UseCors("AllowAngularApp");
-
+app.UseSession();                 // Enable session management
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

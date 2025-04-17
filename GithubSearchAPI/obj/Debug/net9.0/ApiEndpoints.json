@@ -16,6 +16,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GithubSearchAPI.Controllers.BookmarksController",
+    "Method": "GetBookmarks",
+    "RelativePath": "api/Bookmarks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GithubSearchAPI.Controllers.BookmarksController",
+    "Method": "SaveBookmarks",
+    "RelativePath": "api/Bookmarks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "repos",
+        "Type": "System.Collections.Generic.List\u00601[[GithubSearchAPI.Models.GitHubRepoDto, GithubSearchAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GithubSearchAPI.Controllers.GitHubController",
     "Method": "SearchRepos",
     "RelativePath": "api/GitHub/search",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GithubSearchAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15ed007ad74f0e6bd739b66f05356bf407ed901a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6efde2334f289ee01dbe2aed1d4fd56f48aa3b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("GithubSearchAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GithubSearchAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
