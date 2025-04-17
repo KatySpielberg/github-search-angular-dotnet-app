@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "GithubSearchAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credentials",
+        "Type": "GithubSearchAPI.Models.UserCredentials",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GithubSearchAPI.Controllers.GitHubController",
     "Method": "SearchRepos",
     "RelativePath": "api/GitHub/search",

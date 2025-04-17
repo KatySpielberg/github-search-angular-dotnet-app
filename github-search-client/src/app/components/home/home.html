@@ -1,0 +1,22 @@
+<!-- home.html -->
+<!-- Displays the search input, button, and search results -->
+
+<div class="search-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Search GitHub repos...</mat-label>
+      <input matInput [(ngModel)]="searchInput" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="searchRepos(searchInput)">
+      Search
+    </button>
+  </div>
+  
+  <div class="results-container">
+    <app-repo-card 
+      *ngFor="let repo of repos"
+      [repo]="repo"
+      (bookmark)="onBookmark(repo)">
+    </app-repo-card>
+  </div>
+  

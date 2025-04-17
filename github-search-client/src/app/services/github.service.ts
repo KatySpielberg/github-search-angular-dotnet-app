@@ -8,8 +8,7 @@ import { GithubRepo } from '../models/github-repo.model';
   providedIn: 'root'
 })
 export class GithubService {
-  private apiUrl = `${environment.apiUrl}/search`;
-  
+  private apiUrl = `${environment.apiUrl}/github`;
   constructor(private http: HttpClient) {}
   
   
@@ -20,8 +19,8 @@ export class GithubService {
  * @returns Observable<GithubRepo[]> - a stream of repository data from the API
  */
   searchRepos(query: string): Observable<GithubRepo[]> {
-    return this.http.get<GithubRepo[]>(`${this.apiUrl}?query=${encodeURIComponent(query)}`);
-        //Katy: encodeURIComponent is safer - handles special characters
+    return this.http.get<GithubRepo[]>(`${this.apiUrl}/search?query=${encodeURIComponent(query)}`);
+    //Katy: encodeURIComponent is safer - handles special characters
   }
 
   // Katya's comment - why to use GET in this case:

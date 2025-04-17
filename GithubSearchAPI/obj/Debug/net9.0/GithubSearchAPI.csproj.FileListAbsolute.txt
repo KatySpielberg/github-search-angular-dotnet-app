@@ -36,3 +36,8 @@ C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\GithubSearchAPI.pdb
 C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\GithubSearchAPI.genruntimeconfig.cache
 C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\ref\GithubSearchAPI.dll
 C:\git\FNX-Katya-Spielberg\GithubSearchAPI\obj\Debug\net9.0\GithubSearchAPI.sourcelink.json
+C:\git\FNX-Katya-Spielberg\GithubSearchAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\git\FNX-Katya-Spielberg\GithubSearchAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\git\FNX-Katya-Spielberg\GithubSearchAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\git\FNX-Katya-Spielberg\GithubSearchAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\git\FNX-Katya-Spielberg\GithubSearchAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

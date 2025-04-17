@@ -1,0 +1,30 @@
+.heading {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .empty-message {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+    color: #ccc;
+  }
+  
+  .repo-card {
+    margin: 16px auto;
+    max-width: 600px;
+  }
+  
+  .owner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+  
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+  }
+  
