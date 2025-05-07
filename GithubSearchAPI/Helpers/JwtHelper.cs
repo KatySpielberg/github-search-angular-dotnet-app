@@ -29,5 +29,17 @@ namespace GithubSearchAPI.Helpers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
+        internal static string ValidateToken(string accessToken, string refreshToken)
+        {
+            if (string.IsNullOrEmpty(accessToken))
+                return "Invalid token: token is empty.";
+
+            var parts = accessToken.Split('.');
+            if (parts.Length != 3)
+                return "Invalid token: incorrect format.";
+
+            return "Token is valid.";
+        }
     }
 }

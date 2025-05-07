@@ -21,13 +21,17 @@ export class BookmarkService {
    */
   addBookmark(repo: GithubRepo): void {
     const bookmarks = this.getBookmarks();
-    const exists = bookmarks.some(r => r.id === repo.id);
-    if (!exists) {
-      bookmarks.push(repo);
-      sessionStorage.setItem(this.storageKey, JSON.stringify(bookmarks));
+  
+    const exists = bookmarks.some(b => b.id === repo.id);
+    if (exists) {    
+      console.log('Repository is already bookmarked. Prevent adding duplicate bookmarks');
+      return;
     }
+  
+    bookmarks.push(repo);
+    sessionStorage.setItem('bookmarks', JSON.stringify(bookmarks));
   }
-
+  
   /**
    * Removes a GitHub repository from bookmarks by ID.
    * Not required now. For future using.
@@ -37,4 +41,6 @@ export class BookmarkService {
     const updated = this.getBookmarks().filter(repo => repo.id !== id);
     sessionStorage.setItem(this.storageKey, JSON.stringify(updated));
   }
+  
+  
 }

@@ -27,7 +27,8 @@ export class BookmarksComponent implements OnInit {
    * Removes the selected repository from bookmarks
    * @param repo - repository to remove
    */
-  remove(repo: GithubRepo): void {
+  deleteBookmark(repo: GithubRepo): void {
+    console.log("deleteBookmark called");
     this.bookmarkService.removeBookmark(repo.id);
     this.bookmarks = this.bookmarkService.getBookmarks(); // refresh view
   }
